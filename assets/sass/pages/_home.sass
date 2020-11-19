@@ -1,0 +1,47 @@
+.home
+    .head
+        display: grid
+        grid-template-columns: 1fr 3fr 1.5fr
+        align-items: center
+        margin: 10rem 3rem 0
+        letter-spacing: 2px
+        .left-sidebar
+            width: 0
+            justify-self: left
+            p
+                color: $blueGrey
+                font-size: 0.7rem
+                letter-spacing: 4px
+                -webkit-transform: rotate(270deg)
+                -moz-transform: rotate(270deg)
+                -o-transform: rotate(270deg)  
+                transform: rotate(270deg)
+        .landing-section
+            .horizontal-line
+                width: 5rem
+                height: 0.1rem
+                margin-bottom: 3rem
+                background: linear-gradient(45deg, $pink, $orange)
+                background: webkit-linear-gradient(45deg, $pink, $orange)
+            .intro-text
+                letter-spacing: 0
+                max-width: 28rem
+            .kevin-large
+                width: 100%
+                max-width: 48rem
+                margin: 9rem 1rem
+            .my-work
+                p
+                    font-size: 0.7rem
+                    font-family: $sansBold
+                    text-transform: uppercase
+                svg
+                    margin-top: 1rem
+
+        .copywrite
+            text-transform: uppercase
+            align-self: end
+            justify-self: end
+            p
+                font-family: $sansMedium
+                font-size: 0.6rem

@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "cerebri_sans_pro_boldbold";
+  src: url("../fonts/cerebrisanspro-bold-webfont.woff2") format("woff2"), url("../fonts/cerebrisanspro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cerebri_sans_proextrabold";
+  src: url("../fonts/cerebrisanspro-extrabold-webfont.woff2") format("woff2"), url("../fonts/cerebrisanspro-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cerebri_sans_pro_italicitalic";
+  src: url("../fonts/cerebrisanspro-italic-webfont.woff2") format("woff2"), url("../fonts/cerebrisanspro-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cerebri_sans_promedium";
+  src: url("../fonts/cerebrisanspro-medium-webfont.woff2") format("woff2"), url("../fonts/cerebrisanspro-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "cerebri_sans_proregular";
+  src: url("../fonts/cerebrisanspro-regular-webfont.woff2") format("woff2"), url("../fonts/cerebrisanspro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "butlerblack";
+  src: url("../fonts/butler_black-webfont.woff2") format("woff2"), url("../fonts/butler_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "butlerbold";
+  src: url("../fonts/butler_bold-webfont.woff2") format("woff2"), url("../fonts/butler_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "butlerextrabold";
+  src: url("../fonts/butler_extrabold-webfont.woff2") format("woff2"), url("../fonts/butler_extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "butlermedium";
+  src: url("../fonts/butler_medium-webfont.woff2") format("woff2"), url("../fonts/butler_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: "butlerblack";
+}
+
+p, a {
+  font-family: "cerebri_sans_proregular";
+}
+
+header p, a {
+  font-family: "cerebri_sans_promedium";
+  font-size: 0.7rem;
+}
+
+/* Primary */
+/* Secondary */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.5fr;
+  align-items: center;
+  margin: 2rem 3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1368px) {
+  header {
+    grid-template-columns: 1fr 3fr 2.5fr;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 25rem;
+}
+header nav .active {
+  color: #000000;
+}
+header a, header p {
+  text-decoration: none;
+  color: #9192A4;
+  letter-spacing: 2px;
+}
+header a {
+  -webkit-transition: ease-in-out 0.2s;
+  -moz-transition: ease-in-out 0.2s;
+  -o-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+header a:hover {
+  color: #000000;
+}
+header .end-nav {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+header .end-nav .theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  cursor: pointer;
+}
+header .end-nav .theme-toggle p {
+  margin: 0 10px;
+}
+header .end-nav .theme-toggle .circle-toggle {
+  border: 2px solid #9192A4;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+}
+header .end-nav .theme-toggle .line-toggle {
+  background: #9192A4;
+  width: 15px;
+  height: 2px;
+  border-radius: 10px;
+}
+header .email {
+  text-transform: initial;
+  margin-left: 2.5rem;
+  font-size: 0.9rem;
+  font-family: "cerebri_sans_proregular";
+  letter-spacing: 0px;
+}
+header .email .email-span {
+  font-family: "cerebri_sans_promedium";
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: #9192A4;
+  -webkit-transition: ease-in-out 0.2s;
+  -moz-transition: ease-in-out 0.2s;
+  -o-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+a:hover {
+  color: #000000;
+}
+
+.home .head {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1.5fr;
+  align-items: center;
+  margin: 10rem 3rem 0;
+  letter-spacing: 2px;
+}
+.home .head .left-sidebar {
+  width: 0;
+  justify-self: left;
+}
+.home .head .left-sidebar p {
+  color: #9192A4;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.home .head .landing-section .horizontal-line {
+  width: 5rem;
+  height: 0.1rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, #EE0979, #FF6A00);
+  background: webkit-linear-gradient(45deg, #EE0979, #FF6A00);
+}
+.home .head .landing-section .intro-text {
+  letter-spacing: 0;
+  max-width: 28rem;
+}
+.home .head .landing-section .kevin-large {
+  width: 100%;
+  max-width: 48rem;
+  margin: 9rem 1rem;
+}
+.home .head .landing-section .my-work p {
+  font-size: 0.7rem;
+  font-family: "cerebri_sans_pro_boldbold";
+  text-transform: uppercase;
+}
+.home .head .landing-section .my-work svg {
+  margin-top: 1rem;
+}
+.home .head .copywrite {
+  text-transform: uppercase;
+  align-self: end;
+  justify-self: end;
+}
+.home .head .copywrite p {
+  font-family: "cerebri_sans_promedium";
+  font-size: 0.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

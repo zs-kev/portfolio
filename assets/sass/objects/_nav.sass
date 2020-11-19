@@ -1,0 +1,58 @@
+header
+    display: grid
+    grid-template-columns: 1fr 3fr 1.5fr
+    align-items: center
+    margin: 2rem 3rem
+    font-size: 0.9rem
+    text-transform: uppercase
+    @media only screen and (max-width: 1368px)
+        grid-template-columns: 1fr 3fr 2.5fr
+    nav
+        display: flex
+        justify-content: space-between
+        max-width: 25rem
+        .active
+            color: $black
+    a, p
+        text-decoration: none
+        color: $blueGrey
+        letter-spacing: 2px
+    a
+        -webkit-transition: ease-in-out 0.2s
+        -moz-transition: ease-in-out 0.2s
+        -o-transition: ease-in-out 0.2s
+        transition: ease-in-out 0.2s
+        &:hover
+            color: $black
+    .end-nav
+        display: flex
+        align-items: center
+        justify-self: end
+        .theme-toggle
+            display: flex
+            align-items: center
+            justify-self: end
+            cursor: pointer
+            p
+                margin: 0 10px
+            .circle-toggle
+                border: 2px solid $blueGrey
+                border-radius: 50%
+                width: 12px
+                height: 12px
+                margin-right: 2px
+            .line-toggle
+                background: $blueGrey
+                width: 15px
+                height: 2px
+                border-radius: 10px
+
+    .email
+        text-transform: initial
+        margin-left: 2.5rem
+        font-size: 0.9rem
+        font-family: $sansRegular
+        letter-spacing: 0px
+        .email-span
+            font-family: $sansMedium
+            color: $black
