@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <script src="assets/js/lightdark.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
     <script src="assets/js/app.js" defer></script>
 
     <title>Kevin Simon Portfolio</title>
@@ -41,7 +43,7 @@
         />
       </svg>
       <nav>
-        <a href="#" class="active">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="#">About</a>
         <a href="#">Portfolio</a>
         <a href="#">Contact</a>
@@ -49,8 +51,10 @@
       <div class="end-nav">
         <div class="theme-toggle">
           <p>Light</p>
-          <div class="circle-toggle"></div>
-          <div class="line-toggle"></div>
+          <button class="toggle-button">
+            <div class="circle-toggle lightdark-toggle"></div>
+            <div class="line-toggle lightdark-toggle"></div>
+          </button>
           <p>Dark</p>
         </div>
         <p class="email">
@@ -71,7 +75,8 @@
             South Africa. I work with HTML, SASS, CSS, JavaScript, TypeScript,
             React and Node.js
           </p>
-          <svg class="kevin-large"
+          <svg
+            class="kevin-large"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             width="765.3"
@@ -134,9 +139,74 @@
           </div>
         </div>
         <div class="copywrite">
-          <p>&#169; 2020 Kevin Simon</p>
+          <p>&#169; 2020 kevinsimon.io</p>
         </div>
       </section>
+      <div id="particles-js"></div>
     </main>
+
+    <footer>
+      <div class="footer-horizontal-line"></div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="assets/images/logos/kevin-logo.svg" alt="Kevin logo" />
+          <p>&#169; 2020 kevinsimon.io</p>
+        </div>
+        <div class="ready-to-start">
+          <h3>Ready to start?</h3>
+          <p>Enquire now to discuss your next project</p>
+          <button>Get in touch</button>
+        </div>
+        <div class="footer-social">
+          <a href="#">LinkedIn</a>
+          <a href="#">Github</a>
+          <a href="#">StackOverflow</a>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="1919.998"
+        height="332.014"
+        viewBox="0 0 1919.998 332.014"
+      >
+        <defs>
+          <linearGradient
+            id="linear-gradient"
+            x1="0.5"
+            y1="1"
+            x2="0.5"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#ee0979" />
+            <stop offset="1" stop-color="#ff6a00" />
+          </linearGradient>
+          <linearGradient
+            id="linear-gradient-2"
+            x1="0.5"
+            y1="1"
+            x2="0.5"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#ef4868" />
+            <stop offset="1" stop-color="#fb791d" />
+          </linearGradient>
+        </defs>
+        <g id="bg" transform="translate(0 -4467.986)">
+          <path
+            id="wave"
+            d="M.219,4800l1919.705-.055.073-210.569s-246.208,22.043-484.234-70.892c-286.589-111.9-510.314-4.681-541.7,7.46-76.4,29.537-191.926,122.255-574.9,28.124C175.752,4513.914.011,4541.546.011,4541.546Z"
+            fill="url(#linear-gradient)"
+          />
+          <path
+            id="wave-2"
+            data-name="wave"
+            d="M0,4800l1920-.041-.435-128.8s-281.709,67.851-549.007-28.1c-329.147-118.151-542.136-8.436-591.695,8.88-47.957,18.323-156.035,83.878-515.968,5.686C153.661,4633.9,0,4648.444,0,4648.444Z"
+            fill="url(#linear-gradient-2)"
+          />
+        </g>
+      </svg>
+    </footer>
+    <script src="assets/js/libraries/particles.js"></script>
   </body>
 </html>

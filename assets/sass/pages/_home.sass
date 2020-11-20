@@ -1,4 +1,6 @@
 .home
+    p
+        color: var(--primarytext-color)
     .head
         display: grid
         grid-template-columns: 1fr 3fr 1.5fr
@@ -9,12 +11,12 @@
             width: 0
             justify-self: left
             p
-                color: $blueGrey
+                color: var(--secondarytext-color)
                 font-size: 0.7rem
                 letter-spacing: 4px
                 -webkit-transform: rotate(270deg)
                 -moz-transform: rotate(270deg)
-                -o-transform: rotate(270deg)  
+                -o-transform: rotate(270deg)
                 transform: rotate(270deg)
         .landing-section
             .horizontal-line
@@ -45,3 +47,10 @@
             p
                 font-family: $sansMedium
                 font-size: 0.6rem
+
+    #particles-js
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        z-index: -1
