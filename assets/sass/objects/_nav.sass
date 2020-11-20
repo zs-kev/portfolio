@@ -2,7 +2,7 @@ header
     display: grid
     grid-template-columns: 1fr 3fr 1.5fr
     align-items: center
-    margin: 2rem 3rem
+    padding: 2rem 3rem
     font-size: 0.9rem
     text-transform: uppercase
     @media only screen and (max-width: 1368px)
@@ -12,10 +12,10 @@ header
         justify-content: space-between
         max-width: 25rem
         .active
-            color: $black
+            color: var(--primarytext-color)
     a, p
         text-decoration: none
-        color: $blueGrey
+        color: var(--secondarytext-color)
         letter-spacing: 2px
     a
         -webkit-transition: ease-in-out 0.2s
@@ -23,29 +23,49 @@ header
         -o-transition: ease-in-out 0.2s
         transition: ease-in-out 0.2s
         &:hover
-            color: $black
+            color: var(--primarytext-color)
     .end-nav
         display: flex
-        align-items: center
+        align-items: baseline
         justify-self: end
         .theme-toggle
             display: flex
             align-items: center
             justify-self: end
-            cursor: pointer
             p
                 margin: 0 10px
-            .circle-toggle
-                border: 2px solid $blueGrey
-                border-radius: 50%
-                width: 12px
-                height: 12px
-                margin-right: 2px
-            .line-toggle
-                background: $blueGrey
-                width: 15px
-                height: 2px
-                border-radius: 10px
+                &:first-child
+                    margin-right: 20px
+                &:last-child
+                    margin-left: 20px
+            button
+                background: none
+                border: 0
+                display: flex
+                align-items: center
+                cursor: pointer
+                position: relative
+                .circle-toggle
+                    border: 2px solid var(--secondarytext-color)
+                    box-shadow: 0 0 0 2px var(--background-color)
+                    background-color: var(--toggle-background-color)
+                    border-radius: 50%
+                    width: 12px
+                    height: 12px
+                    transform: translateX(var(--cricle-toggle-position))
+                    transition: ease-in-out 0.3s
+                    z-index: 2
+                    position: relative
+                .line-toggle
+                    background: var(--secondarytext-color)
+                    width: 30px
+                    height: 2px
+                    border-radius: 10px
+                    margin: 0 2px
+                    transform: translateX(var(--line-toggle-position))
+                    z-index: 1
+                    position: absolute
+                    right: -10px
 
     .email
         text-transform: initial
@@ -55,4 +75,4 @@ header
         letter-spacing: 0px
         .email-span
             font-family: $sansMedium
-            color: $black
+            color: var(--primarytext-color)

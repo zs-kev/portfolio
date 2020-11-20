@@ -4,5 +4,24 @@
     box-sizing: border-box
 
 body
-    background-color: $white
+    --background-color: #{$white}
+    --primarytext-color: #{$black}
+    --secondarytext-color: #{$blueGrey}
+    --toggle-background-color: #{$white}
+
+    --cricle-toggle-position: -90%
+
+    background-color: var(--background-color)
     font-size: 18px
+    height: 100%
+
+body.dark
+    --background-color: #{$black}
+    --primarytext-color: #{$white}
+    --secondarytext-color: #{$blueGrey}
+    --toggle-background-color: #{$blueGrey}
+
+    --cricle-toggle-position: 100%
+
+    background-color: var(--background-color)
+    height: 100%
