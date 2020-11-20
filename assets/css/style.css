@@ -197,6 +197,10 @@ header .email .email-span {
   color: var(--primarytext-color);
 }
 
+footer svg {
+  width: 100%;
+}
+
 a {
   text-decoration: none;
   color: #9192A4;
@@ -267,10 +271,43 @@ a:hover {
 }
 .home #particles-js {
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   top: 0;
   z-index: -1;
+}
+.home .selected-projects .macy-container {
+  margin: 8rem 20%;
+}
+.home .selected-projects .first-project {
+  background-color: #9192A4;
+  height: 400px;
+}
+.home .selected-projects .second-project {
+  background-color: #9192A4;
+  height: 400px;
+  max-width: 16rem;
+  margin-left: auto;
+}
+.home .selected-projects .third-project {
+  background-color: #9192A4;
+  height: 300px;
+}
+.home .selected-projects .testimonial {
+  max-width: 14rem;
+  text-align: right;
+  margin-left: auto;
+}
+.home .selected-projects .testimonial h3 {
+  font-size: 3.5rem;
+}
+.home .selected-projects .forth-project {
+  background-color: #9192A4;
+  height: 450px;
+}
+.home .selected-projects .fith-project {
+  background-color: #9192A4;
+  height: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
