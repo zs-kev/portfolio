@@ -11,7 +11,8 @@ body
 
     --cricle-toggle-position: -90%
 
-    background-color: var(--background-color)
+    transition: ease-in-out 0.2s
+    background: var(--background-color)
     font-size: 18px
     height: 100%
 
@@ -23,5 +24,27 @@ body.dark
 
     --cricle-toggle-position: 100%
 
-    background-color: var(--background-color)
+    transition: ease-in-out 0.2s
+    background: var(--background-color)
     height: 100%
+
+body.huddle
+    --background-color: #{#00252e}
+    --primarytext-color: #{$white}
+
+    transition: ease-in-out 0.2s
+    background: var(--background-color)
+
+body.axio
+    --background-color: #{#F6F6F6}
+    --primarytext-color: #{$black}
+    --secondarytext-color: #{$black}
+
+    transition: ease-in-out 0.3s
+    background: var(--background-color)
+
+body.kevin
+    --primarytext-color: #{$white}
+    --secondarytext-color: #{$white}
+
+    transition: ease-in-out 0.3s
