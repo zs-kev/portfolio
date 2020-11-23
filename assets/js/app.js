@@ -8,7 +8,7 @@ const navToggle = (e) => {
     gsap.fromTo('.middle-line', 0.5, { x: '0%' }, { x: '-150%' });
     gsap.fromTo('.middle-line', 0.5, { opacity: 1 }, { opacity: 0 });
     gsap.fromTo('.nav', 1, { height: '0%' }, { height: '100%' });
-    gsap.fromTo('.nav', 1, { padding: '0rem' }, { padding: '1rem' });
+    gsap.fromTo('.nav', 1, { padding: '0rem' }, { padding: '0rem 1rem 4rem' });
     gsap.to('header', 1, { backgroundColor: 'var(--background-color)' });
     gsap.to('header', 1, { height: '100vh' });
   } else {
@@ -18,7 +18,7 @@ const navToggle = (e) => {
     gsap.fromTo('.middle-line', 0.5, { x: '-150%' }, { x: '0%' });
     gsap.fromTo('.middle-line', 0.5, { opacity: 0 }, { opacity: 1 });
     gsap.fromTo('.nav', 1, { height: '100%' }, { height: '0%' });
-    gsap.fromTo('.nav', 1, { padding: '1rem' }, { padding: '0rem' });
+    gsap.fromTo('.nav', 1, { padding: '0rem 1rem 4rem' }, { padding: '0rem' });
     gsap.to('header', 1, { backgroundColor: 'transparent' });
     gsap.to('header', 1, { height: '0' });
   }
