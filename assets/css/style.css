@@ -100,6 +100,7 @@ body {
   --primarytext-color: #000000;
   --secondarytext-color: #9192A4;
   --toggle-background-color: #ffffff;
+  --contact-shadow: 0px 15px 100px -40px rgba(0, 0, 0, 0.3);
   --cricle-toggle-position: -90%;
   transition: ease-in-out 0.2s;
   background: var(--background-color);
@@ -112,6 +113,7 @@ body.dark {
   --primarytext-color: #ffffff;
   --secondarytext-color: #9192A4;
   --toggle-background-color: #9192A4;
+  --contact-shadow: 0px 15px 100px -40px rgba(255, 255, 255, 0.3);
   --cricle-toggle-position: 100%;
   transition: ease-in-out 0.2s;
   background: var(--background-color);
@@ -522,6 +524,9 @@ footer svg {
   justify-self: center;
   align-items: center;
 }
+.home .head .left-sidebar .social-icons svg {
+  display: block !important;
+}
 @media screen and (max-width: 1024px) {
   .home .head .left-sidebar .social-icons {
     display: none;
@@ -903,6 +908,86 @@ footer svg {
     align-self: center;
     justify-self: center;
   }
+}
+
+.contact .get-in-touch {
+  padding: 6rem 0;
+}
+.contact .get-in-touch .container {
+  background-color: var(--background-color);
+  max-width: 60%;
+  margin: 0 auto;
+  box-shadow: var(--contact-shadow);
+  -webkit-box-shadow: var(--contact-shadow);
+  -moz-box-shadow: var(--contact-shadow);
+  padding: 3rem 4rem 4rem;
+}
+.contact .get-in-touch .container .intro {
+  text-align: center;
+  max-width: 22rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact .get-in-touch .container .intro h1 {
+  font-family: "cerebri_sans_promedium";
+  color: var(--primarytext-color);
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+}
+.contact .get-in-touch .container .intro p {
+  font-size: 0.8rem;
+  color: var(--secondarytext-color);
+}
+.contact .get-in-touch .container .contact-info {
+  display: flex;
+  padding-top: 3rem;
+}
+.contact .get-in-touch .container .contact-info .contact-form {
+  letter-spacing: 2px;
+}
+.contact .get-in-touch .container .contact-info .contact-form button {
+  color: var(--background-color);
+  background-color: var(--primarytext-color);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "cerebri_sans_promedium";
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+.contact .information {
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+.contact .information h3 {
+  font-family: "cerebri_sans_proregular";
+  font-size: 1rem;
+  color: var(--primarytext-color);
+}
+.contact .information p {
+  font-size: 0.7rem;
+  color: var(--secondarytext-color);
+  margin: 0.5rem 0 1.2rem;
+}
+.contact .information a {
+  color: var(--primarytext-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.6rem;
+}
+.contact .information a:hover {
+  color: var(--secondarytext-color);
+}
+.contact #particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
