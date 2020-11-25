@@ -101,6 +101,7 @@ body {
   --secondarytext-color: #9192A4;
   --toggle-background-color: #ffffff;
   --contact-shadow: 0px 15px 100px -40px rgba(0, 0, 0, 0.3);
+  --submit-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   --cricle-toggle-position: -90%;
   transition: ease-in-out 0.2s;
   background: var(--background-color);
@@ -114,6 +115,7 @@ body.dark {
   --secondarytext-color: #9192A4;
   --toggle-background-color: #9192A4;
   --contact-shadow: 0px 15px 100px -40px rgba(255, 255, 255, 0.3);
+  --submit-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
   --cricle-toggle-position: 100%;
   transition: ease-in-out 0.2s;
   background: var(--background-color);
@@ -519,13 +521,10 @@ footer svg {
 }
 .home .head .left-sidebar .social-icons {
   align-self: end;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-self: center;
   align-items: center;
-}
-.home .head .left-sidebar .social-icons svg {
-  display: block !important;
 }
 @media screen and (max-width: 1024px) {
   .home .head .left-sidebar .social-icons {
@@ -922,6 +921,26 @@ footer svg {
   -moz-box-shadow: var(--contact-shadow);
   padding: 3rem 4rem 4rem;
 }
+@media screen and (max-width: 1400px) {
+  .contact .get-in-touch .container {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contact .get-in-touch .container {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 940px) {
+  .contact .get-in-touch .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .contact .get-in-touch .container {
+    padding: 3rem 2rem 4rem;
+  }
+}
 .contact .get-in-touch .container .intro {
   text-align: center;
   max-width: 22rem;
@@ -939,22 +958,223 @@ footer svg {
   color: var(--secondarytext-color);
 }
 .contact .get-in-touch .container .contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  padding-top: 4rem;
+}
+@media screen and (max-width: 840px) {
+  .contact .get-in-touch .container .contact-info {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 840px) {
+  .contact .get-in-touch .container .contact-info .contact-detail {
+    grid-row-start: 2;
+    margin-top: 5rem;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-detail .contacts {
   display: flex;
-  padding-top: 3rem;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .contacts svg:nth-child(2) {
+  margin: 1.5rem 0;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .contacts text {
+  font-family: "cerebri_sans_proregular";
+}
+.contact .get-in-touch .container .contact-info .contact-detail .contacts g {
+  color: var(--secondarytext-color);
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons {
+  align-self: end;
+  display: flex !important;
+  justify-self: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .contact .get-in-touch .container .contact-info .contact-detail .social-icons {
+    display: none;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .linkedin {
+  width: 2rem;
+  height: 2rem;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .linkedin #linkedin {
+  fill: #9192A4;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .linkedin:hover #linkedin {
+  fill: var(--primarytext-color);
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .github {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .github path {
+  fill: #9192A4;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .github:hover path {
+  fill: var(--primarytext-color);
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .stackoverflow {
+  fill: #9192A4;
+  width: 1.3rem;
+  height: 1.5rem;
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons .stackoverflow:hover {
+  fill: var(--primarytext-color);
+}
+.contact .get-in-touch .container .contact-info .contact-detail .social-icons a:nth-child(2) {
+  margin: 0 0.7rem 0 0.4rem;
 }
 .contact .get-in-touch .container .contact-info .contact-form {
   letter-spacing: 2px;
 }
-.contact .get-in-touch .container .contact-info .contact-form button {
+.contact .get-in-touch .container .contact-info .contact-form form {
+  display: grid;
+}
+.contact .get-in-touch .container .contact-info .contact-form form .name, .contact .get-in-touch .container .contact-info .contact-form form .phone {
+  margin-right: 15px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .name, .contact .get-in-touch .container .contact-info .contact-form form .phone {
+    margin-right: 0;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form .email, .contact .get-in-touch .container .contact-info .contact-form form .subject {
+  margin-left: 15px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .email, .contact .get-in-touch .container .contact-info .contact-form form .subject {
+    margin-left: 0;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form .email {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .email {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form .phone {
+  grid-row-start: 2;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .phone {
+    grid-row-start: 3;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form .subject {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .subject {
+    grid-column-start: 1;
+    grid-row-start: 4;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form .message {
+  grid-column: 1/3;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form .message {
+    grid-column: 1/1;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form div {
+  position: relative;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div .floating-label {
+  transition: 0.3s ease-in-out;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div input, .contact .get-in-touch .container .contact-info .contact-form form div textarea {
+  border: none;
+  border-bottom: 1px solid var(--secondarytext-color);
+  background: var(--background-color);
+  padding: 0 0 0.8rem;
+  font-family: "cerebri_sans_promedium";
+  font-size: 1rem;
+  width: 100%;
+}
+@media screen and (max-width: 568px) {
+  .contact .get-in-touch .container .contact-info .contact-form form div input, .contact .get-in-touch .container .contact-info .contact-form form div textarea {
+    margin: 0;
+  }
+}
+.contact .get-in-touch .container .contact-info .contact-form form div input:focus, .contact .get-in-touch .container .contact-info .contact-form form div textarea:focus {
+  outline: 0;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div input:focus ~ .floating-label, .contact .get-in-touch .container .contact-info .contact-form form div textarea:focus ~ .floating-label {
+  top: -25px;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div input:not(:placeholder-shown) ~ .floating-label, .contact .get-in-touch .container .contact-info .contact-form form div textarea:not(:placeholder-shown) ~ .floating-label {
+  top: -25px;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div ::-webkit-input-placeholder {
+  opacity: 0;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div :-ms-input-placeholder {
+  opacity: 0;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div ::placeholder {
+  opacity: 0;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondarytext-color);
+  font-family: "cerebri_sans_proregular";
+  font-size: 0.66rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.contact .get-in-touch .container .contact-info .contact-form form div textarea {
+  height: 6rem;
+  resize: none;
+}
+.contact .get-in-touch .container .contact-info .contact-form form button {
+  display: block;
+  position: relative;
   color: var(--background-color);
   background-color: var(--primarytext-color);
   border: none;
-  padding: 0.9rem 1.8rem;
+  padding: 1.2rem 1.8rem;
+  margin-top: 2rem;
   text-transform: uppercase;
   cursor: pointer;
   font-family: "cerebri_sans_promedium";
   font-size: 0.7rem;
   letter-spacing: 2px;
+  grid-column-start: 1;
+  width: 8rem;
+  height: 3.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.contact .get-in-touch .container .contact-info .contact-form form button span {
+  color: var(--background-color);
+}
+.contact .get-in-touch .container .contact-info .contact-form form button .hide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 200%);
+}
+.contact .get-in-touch .container .contact-info .contact-form form button .show {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .contact .information {
   display: flex;
@@ -962,6 +1182,24 @@ footer svg {
   max-width: 50%;
   margin: 0 auto;
   padding-bottom: 6rem;
+}
+@media screen and (max-width: 1024px) {
+  .contact .information {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .contact .information {
+    display: block;
+  }
+  .contact .information .privacy {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 568px) {
+  .contact .information {
+    max-width: 70%;
+  }
 }
 .contact .information h3 {
   font-family: "cerebri_sans_proregular";
@@ -984,10 +1222,20 @@ footer svg {
 }
 .contact #particles-js {
   position: absolute;
-  height: 100%;
+  height: 114%;
   width: 100%;
   top: 0;
   z-index: -1;
+}
+@media screen and (max-width: 868px) {
+  .contact #particles-js {
+    height: 139%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .contact #particles-js {
+    height: 172%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
