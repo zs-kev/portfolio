@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="199.941" height="19" viewBox="0 0 199.941 19">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="bg" width="21" height="12" transform="translate(374.806 328.488)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_24" data-name="Group 24" transform="translate(-474 -617)">
+    <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(99.194 292.512)" clip-path="url(#clip-path)">
+      <path id="envelope" d="M17.189,133.5H1.778A1.665,1.665,0,0,0,0,135.015v9.095a1.665,1.665,0,0,0,1.778,1.516H17.189a1.665,1.665,0,0,0,1.778-1.516v-9.095A1.665,1.665,0,0,0,17.189,133.5Zm0,1.011a.679.679,0,0,1,.227.039l-7.933,5.861-7.933-5.861a.68.68,0,0,1,.227-.039Zm0,10.105H1.778a.555.555,0,0,1-.593-.505v-8.493L9.1,141.46a.673.673,0,0,0,.777,0l7.91-5.843v8.493A.555.555,0,0,1,17.189,144.615Z" transform="translate(375.905 195.084)" fill="#9192a4"/>
+    </g>
+    <g id="mail" transform="translate(0 -130.883)">
+      <text id="contact_kevinsimon.io" data-name="contact@kevinsimon.io" transform="translate(508.941 762.883)" fill="#9192a4" font-size="16" font-family="CerebriSansPro-Regular, Cerebri Sans Pro" letter-spacing="-0.01em"><tspan x="0" y="0">contact@kevinsimon.io</tspan></text>
+    </g>
+  </g>
+</svg>
