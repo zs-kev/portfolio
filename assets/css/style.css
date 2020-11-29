@@ -66,6 +66,7 @@ h1 {
 
 p, a {
   font-family: "cerebri_sans_proregular";
+  line-height: 1.5;
 }
 
 header p, a {
@@ -976,7 +977,7 @@ footer svg {
 .contact .get-in-touch .container .contact-info .contact-detail .contacts {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .contact .get-in-touch .container .contact-info .contact-detail .contacts svg:nth-child(2) {
   margin: 1.5rem 0;
@@ -992,6 +993,7 @@ footer svg {
   display: flex !important;
   justify-self: center;
   align-items: center;
+  transform: translateX(-6px);
 }
 @media screen and (max-width: 1024px) {
   .contact .get-in-touch .container .contact-info .contact-detail .social-icons {
@@ -1142,7 +1144,7 @@ footer svg {
   height: 6rem;
   resize: none;
 }
-.contact .get-in-touch .container .contact-info .contact-form form button {
+.contact .get-in-touch .container .contact-info .contact-form form .submit-button {
   display: block;
   position: relative;
   color: var(--background-color);
@@ -1161,16 +1163,16 @@ footer svg {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.contact .get-in-touch .container .contact-info .contact-form form button span {
+.contact .get-in-touch .container .contact-info .contact-form form .submit-button span {
   color: var(--background-color);
 }
-.contact .get-in-touch .container .contact-info .contact-form form button .hide {
+.contact .get-in-touch .container .contact-info .contact-form form .submit-button .hide {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, 200%);
 }
-.contact .get-in-touch .container .contact-info .contact-form form button .show {
+.contact .get-in-touch .container .contact-info .contact-form form .submit-button .show {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1222,7 +1224,7 @@ footer svg {
 }
 .contact #particles-js {
   position: absolute;
-  height: 114%;
+  height: 100%;
   width: 100%;
   top: 0;
   z-index: -1;
@@ -1236,6 +1238,118 @@ footer svg {
   .contact #particles-js {
     height: 172%;
   }
+}
+
+.thank-you .get-in-touch .container .intro {
+  max-width: 30rem;
+}
+.thank-you .get-in-touch .container .intro p {
+  max-width: 24rem;
+  margin: 0 auto;
+}
+.thank-you .get-in-touch .container .contact-info {
+  grid-template-columns: 1fr;
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+.thank-you .get-in-touch .container .contact-info p {
+  font-size: 0.8rem;
+  color: var(--secondarytext-color);
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout {
+  margin-bottom: 6rem;
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 540px) {
+  .thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site {
+    flex-direction: column;
+  }
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button {
+  display: block;
+  position: relative;
+  color: var(--background-color);
+  background-color: var(--primarytext-color);
+  border: none;
+  padding: 1.2rem 1.8rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "cerebri_sans_promedium";
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  grid-column-start: 1;
+  width: 8rem;
+  height: 3.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 540px) {
+  .thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button {
+    margin: 2rem auto 0;
+  }
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button span {
+  color: var(--background-color);
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button span svg path {
+  fill: var(--background-color);
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button .hide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 200%);
+}
+.thank-you .get-in-touch .container .contact-info .contact-checkout .checkout-site .submit-button .show {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.thank-you .get-in-touch .container .contact-info .contact-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 840px) {
+  .thank-you .get-in-touch .container .contact-info .contact-detail {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .thank-you .get-in-touch .container .contact-info .contact-detail {
+    flex-direction: column;
+    align-items: start;
+  }
+  .thank-you .get-in-touch .container .contact-info .contact-detail .social-icons {
+    margin-top: 2rem;
+  }
+}
+.thank-you .get-in-touch .container .contact-info .contact-detail .contacts {
+  margin-bottom: 0;
+}
+.thank-you .get-in-touch .container .contact-info .contact-detail .social-icons {
+  align-self: auto;
+}
+
+.faqs .items-container, .privacy-policy .items-container {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+.faqs .items-container .item h2, .privacy-policy .items-container .item h2 {
+  font-family: "cerebri_sans_promedium";
+  font-size: 1.4rem;
+  margin: 4rem 0 2rem;
+  color: var(--primarytext-color);
+}
+.faqs .items-container .item p, .privacy-policy .items-container .item p {
+  color: var(--secondarytext-color);
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

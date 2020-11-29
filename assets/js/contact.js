@@ -9,8 +9,59 @@ const submitHoverHandler = () => {
 
 const submitLeaveHandler = () => {
   gsap.fromTo('.submit', { y: '-250%' }, { y: '0%' });
-  gsap.fromTo('.send', { y: '50%' }, { y: '250%' });
+  gsap.fromTo('.send', { y: '-50%' }, { y: '250%' });
 };
+
+const submitSendingHandler = () => {
+  if (submitButton.querySelector('name') === null) {
+    submitError('EMPTY');
+  } else {
+    gsap.fromTo('.send', { y: '0%' }, { y: '-300%' });
+    gsap.fromTo('.sending', { y: '250%' }, { y: '-50%' });
+  }
+
+  submitButton.removeEventListener('mouseleave', submitLeaveHandler);
+  submitButton.removeEventListener('mouseenter', submitHoverHandler);
+};
+
+function submitError(error) {
+  if (error === 'FAILED') {
+    gsap.fromTo('.sending', { y: '0%' }, { y: '-300%' });
+    gsap.fromTo('.error', { y: '250%' }, { y: '-50%' });
+    gsap.fromTo(
+      submitButton,
+      0.1,
+      { backgroundColor: 'var(--primarytext-color)' },
+      { backgroundColor: '#F42F48' }
+    );
+    submitButton.removeEventListener('mouseleave', submitLeaveHandler);
+    submitButton.removeEventListener('mouseenter', submitHoverHandler);
+  } else if (error === 'EMPTY') {
+    gsap.fromTo('.send', { y: '0%' }, { y: '-300%' });
+    gsap.fromTo('.error', { y: '250%' }, { y: '-50%' });
+    gsap.fromTo(
+      submitButton,
+      0.1,
+      { backgroundColor: 'var(--primarytext-color)' },
+      { backgroundColor: '#F42F48' }
+    );
+    submitButton.removeEventListener('mouseleave', submitLeaveHandler);
+    submitButton.removeEventListener('mouseenter', submitHoverHandler);
+  }
+
+  setTimeout(() => {
+    gsap.fromTo('.submit', { y: '-250%' }, { y: '0%' });
+    gsap.fromTo('.error', { y: '-50%' }, { y: '250%' });
+    gsap.fromTo(
+      submitButton,
+      0.5,
+      { backgroundColor: '#F42F48' },
+      { backgroundColor: 'var(--primarytext-color)' }
+    );
+    submitButton.addEventListener('mouseleave', submitLeaveHandler);
+    submitButton.addEventListener('mouseenter', submitHoverHandler);
+  }, 5000);
+}
 
 // barba.init({
 //     views: [
@@ -73,3 +124,4 @@ const submitLeaveHandler = () => {
 
 submitButton.addEventListener('mouseenter', submitHoverHandler);
 submitButton.addEventListener('mouseleave', submitLeaveHandler);
+submitButton.addEventListener('click', submitSendingHandler);
