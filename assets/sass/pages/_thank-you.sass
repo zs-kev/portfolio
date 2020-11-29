@@ -1,0 +1,73 @@
+.thank-you
+    .get-in-touch
+        .container
+            .intro
+                max-width: 30rem
+                p
+                    max-width: 24rem
+                    margin: 0 auto
+            .contact-info
+                grid-template-columns: 1fr
+                text-align: center
+                max-width: 30rem
+                margin: 0 auto
+                p
+                    font-size: 0.8rem
+                    color: var(--secondarytext-color)
+                .contact-checkout
+                    margin-bottom: 6rem
+                    .checkout-site
+                        display: flex
+                        justify-content: space-between
+                        @media screen and ( max-width: 540px )
+                            flex-direction: column
+                        .submit-button
+                            display: block
+                            position: relative
+                            color: var(--background-color)
+                            background-color: var(--primarytext-color)
+                            border: none
+                            padding: 1.2rem 1.8rem
+                            margin-top: 2rem
+                            text-transform: uppercase
+                            cursor: pointer
+                            font-family: $sansMedium
+                            font-size: 0.7rem
+                            letter-spacing: 2px
+                            grid-column-start: 1
+                            width: 8rem
+                            height: 3.5rem
+                            overflow: hidden
+                            transition: all .3s ease
+                            @media screen and ( max-width: 540px )
+                                margin: 2rem auto 0
+                            span
+                                color: var(--background-color)
+                                svg
+                                    path
+                                        fill: var(--background-color)
+                            .hide
+                                position: absolute
+                                left: 50%
+                                top: 50%
+                                transform: translate(-50%, 200%)
+                            .show
+                                position: absolute
+                                left: 50%
+                                top: 50%
+                                transform: translate(-50%, -50%)
+                .contact-detail
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    @media screen and ( max-width: 840px )
+                        margin-top: 0
+                    @media screen and ( max-width: 350px )
+                        flex-direction: column
+                        align-items: start
+                        .social-icons
+                            margin-top: 2rem
+                    .contacts
+                        margin-bottom: 0
+                    .social-icons
+                        align-self: auto

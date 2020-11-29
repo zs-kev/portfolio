@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="35" viewBox="0 0 36 35">
-  <g id="Group_6" data-name="Group 6" transform="translate(-0.162 0.24)">
-    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(0.162 -0.24)" fill="#172173" stroke="#172173" stroke-width="3">
-      <ellipse cx="18" cy="17.5" rx="18" ry="17.5" stroke="none"/>
-      <ellipse cx="18" cy="17.5" rx="16.5" ry="16" fill="none"/>
-    </g>
-    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M8.45,22.765.364,14.68a1.244,1.244,0,0,1,0-1.759l1.759-1.759a1.244,1.244,0,0,1,1.759,0l5.447,5.447L21,4.942a1.244,1.244,0,0,1,1.759,0L24.514,6.7a1.244,1.244,0,0,1,0,1.759L10.209,22.765A1.244,1.244,0,0,1,8.45,22.765Z" transform="translate(6.364 3.962)" fill="#fff"/>
-  </g>
-</svg>
