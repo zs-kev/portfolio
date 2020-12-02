@@ -1170,7 +1170,7 @@ footer svg {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 200%);
+  transform: translate(-50%, 250%);
 }
 .contact .get-in-touch .container .contact-info .contact-form form .submit-button .show {
   position: absolute;
@@ -1238,6 +1238,14 @@ footer svg {
   .contact #particles-js {
     height: 172%;
   }
+}
+.contact input::-webkit-outer-spin-button,
+.contact input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .thank-you .get-in-touch .container .intro {

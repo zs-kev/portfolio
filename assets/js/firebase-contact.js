@@ -52,11 +52,12 @@ const sendEmail = (name, email, number, subject, message) => {
     Subject: subject,
     Body: `<h3>Name:</h3> ${name} <br> <h3>Email:</h3> ${email} <br> <h3>Number:</h3> ${number} <br><br> <h3>Message:</h3> ${message}`,
   }).then((message) => {
-    if (message === 'OK') {
+    if (message !== 'OK') {
+      console.log('ERROR');
+      setTimeout(submitError('FAILED'), 5000);
+    } else {
       document.querySelector('#contactForm').reset();
       window.location.href = 'contact-thank-you.html';
-    } else {
-      submitError('FAILED');
     }
   });
 };
