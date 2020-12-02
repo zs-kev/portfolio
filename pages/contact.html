@@ -298,7 +298,7 @@
               </div>
             </div>
             <div class="contact-form">
-              <form method="post" id="contactForm">
+              <form method="post" id="contactForm" name="contact">
                 <div class="name input-field">
                   <input type="text" required placeholder="Your Name" name="name" id="name" />
                   <span class="floating-label">Your Name<sup>*</sup></span>
@@ -309,7 +309,7 @@
                 </div>
                 <br />
                 <div class="phone input-field">
-                  <input type="text" required placeholder="Phone Number" name="number" id="number" />
+                  <input type="tel" pattern="[0-9]{1}[0-9]{9}" required placeholder="Phone Number" name="number" id="number" />
                   <span class="floating-label">Phone Number<sup>*</sup></span>
                 </div>
                 <div class="subject input-field">

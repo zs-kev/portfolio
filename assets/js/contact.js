@@ -3,17 +3,23 @@ particlesJS.load('particles-js', '../assets/configs/particles.json');
 const submitButton = document.querySelector('.submit-button');
 
 const submitHoverHandler = () => {
-  gsap.fromTo('.submit', { y: '0%' }, { y: '-250%' });
+  gsap.fromTo('.submit', { y: '0%' }, { y: '-300%' });
   gsap.fromTo('.send', { y: '250%' }, { y: '-50%' });
 };
 
 const submitLeaveHandler = () => {
-  gsap.fromTo('.submit', { y: '-250%' }, { y: '0%' });
+  gsap.fromTo('.submit', { y: '-300%' }, { y: '0%' });
   gsap.fromTo('.send', { y: '-50%' }, { y: '250%' });
 };
 
 const submitSendingHandler = () => {
-  if (submitButton.querySelector('name') === null) {
+  const name = document.querySelector('#name').value,
+    email = document.querySelector('#email').value,
+    number = document.querySelector('#number').value,
+    subject = document.querySelector('#subject').value,
+    message = document.querySelector('#message').value;
+
+  if (!name || !email || !number || !subject || !message) {
     submitError('EMPTY');
   } else {
     gsap.fromTo('.send', { y: '0%' }, { y: '-300%' });
@@ -26,7 +32,7 @@ const submitSendingHandler = () => {
 
 function submitError(error) {
   if (error === 'FAILED') {
-    gsap.fromTo('.sending', { y: '0%' }, { y: '-300%' });
+    gsap.fromTo('.sending', { y: '0%' }, { y: '-350%' });
     gsap.fromTo('.error', { y: '250%' }, { y: '-50%' });
     gsap.fromTo(
       submitButton,
@@ -37,7 +43,7 @@ function submitError(error) {
     submitButton.removeEventListener('mouseleave', submitLeaveHandler);
     submitButton.removeEventListener('mouseenter', submitHoverHandler);
   } else if (error === 'EMPTY') {
-    gsap.fromTo('.send', { y: '0%' }, { y: '-300%' });
+    gsap.fromTo('.send', { y: '0%' }, { y: '-350%' });
     gsap.fromTo('.error', { y: '250%' }, { y: '-50%' });
     gsap.fromTo(
       submitButton,
@@ -50,7 +56,7 @@ function submitError(error) {
   }
 
   setTimeout(() => {
-    gsap.fromTo('.submit', { y: '-250%' }, { y: '0%' });
+    gsap.fromTo('.submit', { y: '-300%' }, { y: '0%' });
     gsap.fromTo('.error', { y: '-50%' }, { y: '250%' });
     gsap.fromTo(
       submitButton,
